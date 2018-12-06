@@ -1,0 +1,19 @@
+---
+- hosts: node
+  tasks:
+  - name: creating a webserver and copying a file
+    package:
+      name: nginx
+      state: present
+  - name: update nginx conf file
+    copy:
+      src: default
+      dest: /etc/nginx/sites-available/default
+  - name: service start nginx
+    service:
+      name: nginx
+      state: started
+  - name: copy index.html
+    copy:
+      content: <h1> welcome to nginx </h1>
+      dest: /var/www/html/index.html
