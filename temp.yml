@@ -1,0 +1,11 @@
+---
+- hosts: node
+  tasks:
+  - name: Copying the template using copy module
+    copy:
+      src: template.j2
+      dest: /home/ubuntu/copy_module
+  - name: copying the template using template module
+    template:
+      src: template.j2
+      dest: /home/ubuntu
