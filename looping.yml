@@ -1,0 +1,10 @@
+---
+- hosts: node
+  tasks:
+  - name: Installing of Packages using loop
+    package:
+      name: "{{item}}"
+      state: installed
+    with_items:
+      - gcc
+      - ntp
