@@ -1,0 +1,21 @@
+---
+- hosts: node
+  vars:
+    user1: "vignesh123"
+    user2: "shruthi"
+    user3: "geetha"
+    user4: "valsan"
+    user5: "priya"
+  tasks:
+  - name: creating a user named vignesh123
+    user:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - user1
+      - user2
+      - user3
+      - user4
+      - user5
+
+
