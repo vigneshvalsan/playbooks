@@ -1,0 +1,9 @@
+---
+- hosts: node
+  tasks: 
+    - name: Creating the group
+      group: 
+        name: valsan
+        state: present
+
+    

@@ -1,0 +1,8 @@
+---
+- hosts: node
+  tasks:
+    - name: creating a directory
+      file: 
+        path: /home/ubuntu/vicky
+        state: directory
+       

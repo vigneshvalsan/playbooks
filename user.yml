@@ -1,0 +1,9 @@
+---
+- hosts: node
+  tasks:
+    - name: Creating a User
+      user:
+        name: geetha
+        state: present
+
+

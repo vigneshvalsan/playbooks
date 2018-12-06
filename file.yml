@@ -1,0 +1,8 @@
+---
+- hosts: node
+  tasks:
+    - name: creatinf a file
+      file:
+        path: /home/ubuntu/myfile
+        state: touch
+        mode: 777
