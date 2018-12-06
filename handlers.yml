@@ -1,0 +1,14 @@
+---
+- hosts: node
+  tasks:
+  - name: installing mysql
+    apt:
+      name: mysql-server
+      state: installed
+    notify:
+      - name: start the mysql
+  handlers:
+    - name: start the mysql
+      service: 
+        name: mysqld
+        state: started
