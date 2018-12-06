@@ -8,7 +8,7 @@
   - name: service start apache2
     service:
       name: apache2
-      state: started
+      state: stopped
   - name: copy index.html
     copy:
       src: index.html

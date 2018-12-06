@@ -1,0 +1,16 @@
+---
+- hosts: node
+  tasks:
+  - name: creating a webserver and copying a file
+    package:
+      name: apache2
+      state: present
+  - name: service start apache2
+    service:
+      name: apache2
+      state: started
+  - name: copy the contents
+    copy:
+      content: <h1>Welcome to the organisation</h1> 
+      dest: /var/www/html/index.html
+
