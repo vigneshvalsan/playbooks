@@ -2,8 +2,9 @@
 - hosts: node
   tasks:
   - name: creating a webserver and copying a file
-    package:
+    apt:
       name: nginx
+      update_cache: true
       state: present
   - name: update nginx conf file
     copy:

@@ -1,0 +1,9 @@
+---
+- hosts: node
+  vars:
+    user1: vignesh123
+  tasks:
+  - name: creating a user named vignesh123
+    user:
+      name: "{{user1}}"
+      state: present
